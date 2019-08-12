@@ -11,6 +11,16 @@
 //	return 0;
 //}
 //2.交换两数的内容，异或
+int main()
+{
+	int m = 5;
+	int n = 3;
+	n = m^n;
+	m = m^n;
+	n = m^n;
+	printf("%d %d", m, n);
+	return 0;
+}
 //int main()
 //{
 //	int x = 2;
@@ -42,48 +52,37 @@
 //排序三个数由大到小
 //int main()
 //{
-//	int i = 0;
-//	int max = 0;
-//	int arr[] = { 10, 5, 55 };
-//	max = arr[0];
-//		for (i = 0; i < 3; i++)
-//		{
-//			if (arr[i]>max)
-//			{
-//				max = arr[i];
-//			}
-//		}
-//		for (i = 0; i < 3; i++)
-//		{
-//			printf("%d ", arr[i]);
-//		}
-//     return 0;
-//
-int main()
-{
-	int x = 0;
-	int y = 0;
-	int z = 0;
-	int t = 0;
-	scanf("%d %d %d", &x, &y, &z);
-	if (x < y)
-	{
-		t = x; x = y; y = t;
-	}
-	if (x < z)
-	{
-		t = x; x = z; z = t;
-	}
-	if (y < z)
-	{
-		t = y; y = z; z = t;
-	}
-	printf("%d %d %d", x, y, z);
-	return 0;
-
-}
-//5.求两个数的最大公约数
+//	int x = 0;
+//	int y = 0;
+//	int z = 0;
+//	int t = 0;
+//	scanf("%d %d %d", &x, &y, &z);
+//	if (x < y)
+//	{
+//		t = x; x = y; y = t;
+//	}
+//	if (x < z)
+//	{
+//		t = x; x = z; z = t;
+//	}
+//	if (y < z)
+//	{
+//		t = y; y = z; z = t;
+//	}
+//	printf("%d %d %d", x, y, z);
+//	return 0;
+//}
+//5.求两个数的最大公约数(辗转相除法)
 //int main()
 //{
-//
+//	int a =24;
+//	int b =18;
+//	//int c = 0;
+//	while ( a%b)
+//	{
+//		b = a%b;
+//		a = b;
+//	}
+//	printf("%d\n", b);
+//	return 0;
 //}
