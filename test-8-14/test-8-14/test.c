@@ -2,62 +2,62 @@
 #include<stdio.h>
 #include <string.h>
 //猜数字
-void menu()
-{
-	printf("****************\n");
-	printf("*****1开始******\n");
-	printf("*****2退出******\n");
-	printf("****************\n");
-}
-#include<time.h>
-void game()
-{
-	int ret = 0;
-	int num = 0;
-	ret = rand() % 100 + 1;
-	while (1)
-	{
-		printf("请输入要猜的数字:>");
-		scanf("%d", &num);
-		if (num > ret)
-		{
-			printf("猜大了\n");
-		}
-		else if (num < ret)
-		{
-			printf("猜小了\n");
-		}
-		else
-		{
-			printf("猜对了\n");
-			break;
-		}
-	}
-}
-int main()
-{
-	int input = 0;
-	srand((unsigned int)time(NULL));
-	do
-	{
-		menu();
-		printf("请选择：>");
-		scanf("%d", &input);
-		switch (input)
-		{
-		case 1:
-			game();
-			break;
-		case 0:
-			printf("退出游戏\n");
-			break;
-		default:
-			printf("选择错误，请重新选择\n");
-			break;
-				}
-	} while (input);
-	return 0;
-}
+//void menu()
+//{
+//	printf("****************\n");
+//	printf("*****1开始******\n");
+//	printf("*****2退出******\n");
+//	printf("****************\n");
+//}
+//#include<time.h>
+//void game()
+//{
+//	int ret = 0;
+//	int num = 0;
+//	ret = rand() % 100 + 1;
+//	while (1)
+//	{
+//		printf("请输入要猜的数字:>");
+//		scanf("%d", &num);
+//		if (num > ret)
+//		{
+//			printf("猜大了\n");
+//		}
+//		else if (num < ret)
+//		{
+//			printf("猜小了\n");
+//		}
+//		else
+//		{
+//			printf("猜对了\n");
+//			break;
+//		}
+//	}
+//}
+//int main()
+//{
+//	int input = 0;
+//	srand((unsigned int)time(NULL));
+//	do
+//	{
+//		menu();
+//		printf("请选择：>");
+//		scanf("%d", &input);
+//		switch (input)
+//		{
+//		case 1:
+//			game();
+//			break;
+//		case 0:
+//			printf("退出游戏\n");
+//			break;
+//		default:
+//			printf("选择错误，请重新选择\n");
+//			break;
+//				}
+//	} while (input);
+//	return 0;
+//}
 
 
 
@@ -160,3 +160,25 @@ int main()
 //
 //
 
+int main()
+{
+	int ch = 0;
+	while ((ch = getchar()) != EOF)
+	{
+		if (ch >= 'A' && ch <= 'Z')
+		{
+			putchar(ch + 32);
+		}
+		else if (ch >= 'a'&&ch <= 'z')
+		{
+			putchar(ch - 32);
+		}
+		else if (ch >= '0'&&ch <= '9')
+		{
+			;
+		}
+		else
+			putchar(ch);
+	}
+	return 0;
+}

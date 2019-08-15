@@ -20,12 +20,13 @@
 //1
 //int main()
 //{
-//	int n = 0;
+//	int line= 0;
 //	int i = 0;
-//	for (i = 1; i <= 7; i++)
+//	scanf("%d", &line);
+//	for (i = 1; i <= line; i++)
 //	{
 //		int j = 0;
-//		for (j = 7-i; j >= 1; j--)
+//		for (j = line-i; j >= 1; j--)
 //		{
 //			printf(" ");
 //		}
@@ -35,14 +36,14 @@
 //		}	
 //		printf("\n");
 //	}
-//	for (i = 1; i < 7; i++)
+//	for (i = 1; i < line; i++)
 //	{
 //		int j = 0;
 //		for (j = 1; j <= i; j++)
 //		{
 //			printf(" ");
 //		}
-//		for (j = 2*(7 - i)-1; j >= 1; j--)
+//		for (j = 2*(line- i)-1; j >= 1; j--)
 //		{
 //			printf("*");
 //		}
@@ -52,40 +53,54 @@
 //}
 
 //2
-//int main()
-//{
-//	int a = 0;
-//	int ge = 0;
-//	int shi = 0;
-//	int bai = 0;
-//	for (a = 100; a <= 999; a++)
-//	{
-//		ge = a % 10;
-//		shi = a / 10 % 10;
-//		bai = a / 100;
-//		if (a == pow(ge, 3) + pow(shi, 3) + pow(bai, 3))
-//		{
-//			printf("%d ", a);
-//		}
-//	}
-//	return 0;
-//}
+#include<math.h>
+int main()
+{
+	int i = 0;
+	for (i = 1; i <= 100000;i++)
+	{
+		//判断i是否为水仙花数
+		//求位数
+		int count = 0;
+		int tmp = i ;
+		int sum = 0;
+		while (tmp)
+		{
+			tmp /= 10;
+			count++;
+		}
+		//求次方和
+		tmp = i;
+		while (tmp)
+		{
+			sum += pow(tmp % 10, count);
+			tmp /= 10;
+		}
+		//判断
+		if (sum == i)
+		{
+			printf("%d ", i);
+		}
+	}
+	return 0;
+}
 
 //3
 
-int main()
-
-{
-	int a = 0;
-	int sn = 0;
-	int i = 0;
-	int ret = 0;
-	scanf("%d", &a);
-	for (i = 1; i <= 5; i++)
-	{
-		ret = 10 * ret + a;
-		sn += ret;
-	}
-	printf("%d ", sn);
-	return 0;
-}
+//int main()
+//
+//{
+//	int a = 0;//一个数字
+//	int sn = 0;
+//	int n = 0;//几项和
+//	int i = 0;
+//	int ret = 0;
+//	scanf("%d %d", &a,&n);
+//	for (i = 0; i < n; i++)
+//	{
+//		ret = 10 * ret + a;
+//		sn += ret;
+//	}
+//	printf("%d ", sn);
+//	return 0;
+//}
