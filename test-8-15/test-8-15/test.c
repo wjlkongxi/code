@@ -82,15 +82,19 @@
 
 void init(int arr[6])
 {
-	arr[6] = { 1, 2, 3, 4, 5, 6 };
+	int i = 0;
+	for (i = 0; i < 6; i++)
+	{
+		arr[i] = i;
+	}
 }
 
 int main()
 {
 	int arr[6] = {0,5,6,2,74,1};
 	init (arr);//³õÊ¼»¯
-	/*empty();
-	reverse();*/
+	empty();
+	reverse();
 	return 0;
 }
 
