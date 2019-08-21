@@ -2,23 +2,23 @@
 #include<stdio.h>
 //1.斐波拉契数列
 //    递归
-int Fib(int n)
-{
-	if (n <= 2)
-		return 1;
-	else
-		return Fib(n - 1) + Fib(n - 2);
-}
-
-int main()
-{
-	int n = 0;
-	int ret = 0;
-	scanf("%d", &n);
-	ret = Fib(n);
-	printf("%d\n", ret);
-	return 0;
-}
+//int Fib(int n)
+//{
+//	if (n <= 2)
+//		return 1;
+//	else
+//		return Fib(n - 1) + Fib(n - 2);
+//}
+//
+//int main()
+//{
+//	int n = 0;
+//	int ret = 0;
+//	scanf("%d", &n);
+//	ret = Fib(n);
+//	printf("%d\n", ret);
+//	return 0;
+//}
 
   /* 非递归*/
 //int main()
@@ -199,20 +199,20 @@ int main()
 ////
 //
 //
-// void reverse_string(char* str)
-// {
-//	    if (*str == '\0')
-//		     {
-//		         return;
-//		     }
-//	     reverse_string(str + 1);
-//	    printf("%c", *str);
-//	 }
-//
-// int main()
-// {
-//	     char* arr = "abcd";
-//	    reverse_string(arr);
-//		printf("\n")
-//		     return 0;
-//	 }
+ void reverse_string(char* str)
+ {
+	    if (*str == '\0')
+		     {
+		         return;
+		     }
+	     reverse_string(str + 1);
+	    printf("%c", *str);
+	 }
+
+ int main()
+ {
+	     char* arr = "abcd";
+	    reverse_string(arr);
+		printf("\n");
+		     return 0;
+	 }
