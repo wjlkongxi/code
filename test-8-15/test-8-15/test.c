@@ -79,22 +79,54 @@
 //实现empty（）清空数组、
 //实现reverse（）函数完成数组元素的逆置。
 //要求：自己设计函数的参数，返回值。
-
-void init(int arr[6])
+#include<string.h>
+void Init(int arr[],int sz)
 {
 	int i = 0;
-	for (i = 0; i < 6; i++)
+	for (i = 0; i < sz; i++)
 	{
-		arr[i] = i;
+		arr[i] =i;
 	}
 }
 
+void reverse(int arr[],int sz)
+{
+	int left = 0;
+	int right = sz - 1;
+	while (left < right)
+	{
+		 int tmp = arr[left];
+		arr[left] = arr[right];
+		arr[right] = tmp;
+		left++;
+		right--;
+	}
+}
+void Print(int arr[], int sz)
+{
+	int i = 0;
+	for (i = 0; i < sz; i++)
+	{
+		printf("%d ", arr[i]);
+	}
+	printf("\n");
+}
+void Empty(int arr[], int sz)
+{
+	memset(arr, 0, sizeof(arr[0])*sz);
+}
+
+
 int main()
 {
-	int arr[6] = {0,5,6,2,74,1};
-	init (arr);//初始化
-	empty();
-	reverse();
+	int arr[10] = {0};
+	int sz = sizeof (arr) / sizeof (arr[0]);
+	Init (arr,sz);//初始化
+	Print(arr,sz);
+	reverse(arr,sz);
+	Print(arr, sz);
+	Empty(arr, sz);
+	Print(arr, sz);
 	return 0;
 }
 
