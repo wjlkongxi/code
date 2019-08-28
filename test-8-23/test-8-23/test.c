@@ -5,32 +5,47 @@
 //输入一个整数数组，实现一个函数，
 //来调整该数组中数字的顺序使得数组中所有的奇数位于数组的前半部分，
 //所有偶数位于数组的后半部分。
-void adjust(int arr, int sz)
+void Move(int arr[], int sz)
 {
-	int i = 0;
-	int j = 0;
-	for (i = 0; i < sz;i++)
+	int left = 0;
+	int right = sz-1;
+	while(left<right)
 	{
-		for (j = 1; j < sz; j++)
+		int tmp = 0;
+		while((left<right)&&(arr[left]%2==1))
 		{
-			if (arr[i] % 2 == 0 && arr[j] % 2 != 0)
-				arr[i] = arr[i] ^ arr[j];
-				arr[j] = arr[i] ^ arr[j];
-				arr[i] = arr[i] ^ arr[j];
+			left++;
 		}
+		while((left<right) && (arr[right]%2==0))
+		{
+			right--;
+		}
+		if(left<right)
+		{
+			tmp = arr[left];
+			arr[left] = arr[right];
+			arr[right] = tmp;
+		}
+		left++;
+		right--;
 	}
 }
-
+void Print(int arr[], int sz)
+{
+	int i = 0;
+	for(i=0; i<sz; i++)
+	{
+	printf("%d ", arr[i]);
+	}
+}
 int main()
 {
-	int arr[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-	int sz = 0;
-	sz = sizeof(arr) / sizeof(arr[0]);
-	adjust(arr,sz);
-
+	int arr[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	Move(arr, sz);
+	Print(arr, sz);
 	return 0;
 }
-
 
 
 //2.
@@ -53,3 +68,46 @@ int main()
 //1 2 3
 //4 5 6
 //7 8 9
+
+
+void Find(int arr[3][3], int* prow, int* pcol, int k)
+{
+	int x = 0;
+	int y = *pcol-1;
+	while(y>=0 && x<=*prow-1)
+	{
+		if(arr[x][y] > k)
+		{
+			y--;
+		}
+		else if(arr[x][y] < k)
+		{
+			x++;
+		}
+		else
+		{
+			*prow = x;
+			*pcol = y;
+		return;
+		}
+	}
+	*prow = -1;
+	*pcol = -1;
+}
+
+int main()
+{
+	int arr[3][3] = {1,2,3,4,5,6,7,8,9};
+	int row = 3;
+	int col = 3;
+	Find(arr, &row, &col, 7);
+	if(row == -1 && col==-1)
+	{
+		printf("找不到\n");
+	}
+	else
+	{
+		printf("找到了:%d %d\n" ,row, col);
+	}
+	return 0;
+}
