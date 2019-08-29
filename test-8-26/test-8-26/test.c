@@ -74,9 +74,9 @@ int main()
 	return 0;
 }
 
-// strcat 的应用
+// strcat 的应用   字符串的追加
 //int main()
-//{
+//{			
 //	char arr[20] = "hello ";
 //	strcat(arr, "world");
 //	printf("%s", arr);
