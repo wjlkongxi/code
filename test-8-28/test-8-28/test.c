@@ -154,5 +154,102 @@
 //	return 0;
 //}
 
+
 //strncpy 的模拟实现
 
+//strstr的实现字符串中查找字符串(输出出现的第一个字符的地址)
+//如果没有该字符，则输出空指针（null）
+//int main()
+//{
+//	char arr[30] = "My name is wang jialong";
+//	char * pch;
+//	pch = strstr(arr, "shang");
+//	printf("%s", pch);
+//	return 0;
+//}
+
+
+//strstr 的模拟实现
+//将两个字符串的地址分别记住s1,s2,p1和p2分别指向s1,s2,将
+
+
+//char* my_strstr(const char*s1, const char*s2)
+//{
+//	const char *p1=s1;
+//	const char *p2=s2;
+//	const char*start = p1;
+//	while (*start)
+//	{
+//		p1 = start;
+//		p2 = s2;
+//		while (*p1 && *p2 && *p1 == *p2)
+//		{
+//			p1++;
+//			p2++;
+//		}
+//		if (*p2 == '\0')
+//		{
+//			return (char *)start;
+//		}
+//		start++;
+//	}
+//}
+//
+//int main()
+//{
+//	char arr[] = "abbbcdef";
+//	char *ret=my_strstr(arr, "bcd");
+//	if (ret != NULL)
+//	{
+//		printf("%s", ret);
+//	}
+//	else
+//		printf("找不到\n");
+//	return 0;
+//}
+
+
+
+//strchr  字符串中查找字符，输出第一个字符的地址，如果没有，
+//这输出空指针（null）
+
+
+//int main()
+//{
+//	char arr[] = "wangjialong";
+//	char*ret = strchr(arr, 'o');
+//	if (ret != NULL)
+//	{
+//		printf("%s", ret);
+//	}
+//	else
+//		printf("找不到");
+//	return 0;
+//}
+
+
+//strchr的模拟实现
+
+char *my_strchr(const char* s1,const char *s2)
+{
+	const char*p1 = s1;
+	while (*p1 == *s2)
+	{
+		s1 = p1;
+		return s1;
+	}
+	p1++;
+}
+
+int main()
+{
+	char arr[] = "abcdefg";
+	char *ret = my_strchr(arr, 'd');
+	if (ret != NULL)
+	{
+		printf("%s", ret);
+	}
+	else
+		printf("找不到");
+	return 0;
+}

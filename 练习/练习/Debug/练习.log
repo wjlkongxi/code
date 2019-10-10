@@ -1,13 +1,37 @@
-﻿生成启动时间为 2019/8/22 11:27:53。
+﻿生成启动时间为 2019/10/9 21:44:39。
      1>项目“D:\CODE\code\练习\练习\练习.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
          D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt "练习.c"
          练习.c
-       Link:
-         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\CODE\code\练习\Debug\练习.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\CODE\code\练习\Debug\练习.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\CODE\code\练习\Debug\练习.lib" /MACHINE:X86 "Debug\练习.obj"
-         练习.vcxproj -> D:\CODE\code\练习\Debug\练习.exe
-     1>已完成生成项目“D:\CODE\code\练习\练习\练习.vcxproj”(Build 个目标)的操作。
+     1>d:\code\code\练习\练习\练习.c(55): error C2143: 语法错误 : 缺少“)”(在“&”的前面)
+     1>d:\code\code\练习\练习\练习.c(55): error C2143: 语法错误 : 缺少“{”(在“&”的前面)
+     1>d:\code\code\练习\练习\练习.c(55): error C2059: 语法错误:“&”
+     1>d:\code\code\练习\练习\练习.c(55): error C2059: 语法错误:“)”
+     1>d:\code\code\练习\练习\练习.c(65): error C2143: 语法错误 : 缺少“)”(在“&”的前面)
+     1>d:\code\code\练习\练习\练习.c(65): error C2143: 语法错误 : 缺少“{”(在“&”的前面)
+     1>d:\code\code\练习\练习\练习.c(65): error C2059: 语法错误:“&”
+     1>d:\code\code\练习\练习\练习.c(65): error C2059: 语法错误:“)”
+     1>d:\code\code\练习\练习\练习.c(81): error C2143: 语法错误 : 缺少“)”(在“&”的前面)
+     1>d:\code\code\练习\练习\练习.c(81): error C2143: 语法错误 : 缺少“{”(在“&”的前面)
+     1>d:\code\code\练习\练习\练习.c(81): error C2059: 语法错误:“&”
+     1>d:\code\code\练习\练习\练习.c(81): error C2059: 语法错误:“)”
+     1>d:\code\code\练习\练习\练习.c(88): error C2143: 语法错误 : 缺少“)”(在“&”的前面)
+     1>d:\code\code\练习\练习\练习.c(88): error C2143: 语法错误 : 缺少“{”(在“&”的前面)
+     1>d:\code\code\练习\练习\练习.c(88): error C2059: 语法错误:“&”
+     1>d:\code\code\练习\练习\练习.c(88): error C2059: 语法错误:“)”
+     1>d:\code\code\练习\练习\练习.c(109): error C2143: 语法错误 : 缺少“)”(在“&”的前面)
+     1>d:\code\code\练习\练习\练习.c(109): error C2143: 语法错误 : 缺少“{”(在“&”的前面)
+     1>d:\code\code\练习\练习\练习.c(109): error C2059: 语法错误:“&”
+     1>d:\code\code\练习\练习\练习.c(109): error C2059: 语法错误:“)”
+     1>d:\code\code\练习\练习\练习.c(132): error C2143: 语法错误 : 缺少“)”(在“&”的前面)
+     1>d:\code\code\练习\练习\练习.c(132): error C2143: 语法错误 : 缺少“{”(在“&”的前面)
+     1>d:\code\code\练习\练习\练习.c(132): error C2059: 语法错误:“&”
+     1>d:\code\code\练习\练习\练习.c(132): error C2059: 语法错误:“)”
+     1>d:\code\code\练习\练习\练习.c(164): warning C4013: “InitList_Sq”未定义；假设外部返回 int
+     1>d:\code\code\练习\练习\练习.c(171): warning C4013: “ListInsert_Sq”未定义；假设外部返回 int
+     1>d:\code\code\练习\练习\练习.c(183): warning C4013: “MergeList_Sq”未定义；假设外部返回 int
+     1>已完成生成项目“D:\CODE\code\练习\练习\练习.vcxproj”(Build 个目标)的操作 - 失败。
 
-生成成功。
+生成失败。
 
-已用时间 00:00:02.57
+已用时间 00:00:00.52
