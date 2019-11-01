@@ -150,88 +150,246 @@
 //}
 
 
-#define MAXSIZE 100
+//#define MAXSIZE 100
+//#include<stdio.h>
+//
+//// 定义数据结构，size为顺序表实际元素个数
+//typedef struct {
+//	int m[MAXSIZE];
+//	int size;
+//}list;
+//
+////创建
+//void creat(list *s)
+//{
+//	int n, len;
+//	printf("输入顺序表的长度：");
+//	scanf("%d", &len);
+//	s->size = len;
+//	printf("输入顺序表的元素：");
+//	for (int i = 0; i < len; i++)
+//	{
+//		scanf("%d", &n);
+//		s->m[i] = n;
+//	}
+//}
+//
+////输出
+//void print(list *s)
+//{
+//	for (int i = 0; i < s->size; i++)
+//		printf("%d ", s->m[i]);
+//	printf("\n");
+//}
+//
+////合并
+//void combine(list *a, list *b, list *c)
+//{
+//	int i = 0, j = 0, k = 0;
+//	//同时扫描两个表 
+//	while (i<a->size && j<b->size)
+//	{
+//		if (a->m[i] <= b->m[j])
+//		{
+//			c->m[k] = a->m[i];
+//			i++;
+//			k++;
+//		}
+//		else
+//		{
+//			c->m[k] = b->m[j];
+//			j++;
+//			k++;
+//		}
+//	}
+//	//A表扫完，B组未扫完 
+//	if (i == a->size)
+//	{
+//		for (; j<b->size; j++)
+//		{
+//			c->m[k] = b->m[j];
+//			k++;
+//		}
+//	}
+//	if (j == b->size)
+//	{
+//		for (; i<a->size; i++)
+//		{
+//			c->m[k] = a->m[i];
+//			k++;
+//		}
+//	}
+//	c->size = k;
+//}
+//
+//
+//int main()
+//{
+//	list a;
+//	list b;
+//	list c;
+//	creat(&a);
+//	creat(&b);
+//	print(&a);
+//	print(&b);
+//	combine(&a, &b, &c);
+//	print(&c);
+
+
+
+//#include <stdio.h>
+//#define ERROR 0
+//#define TRUE 1
+//#define OVERFLOW -1
+//#define maxsize 8
+//#define  ElemType int
+//typedef struct SeqList
+//{
+//	ElemType elem[maxsize];
+//	int length;
+//}SeqList;    /*线性表顺序存储结构*/
+//int insert_SeqList(SeqList * L, int i, ElemType x)
+//{
+//	int j;
+//	if (L->length == maxsize )
+//	{
+//		printf("表满");
+//		return OVERFLOW;
+//	}
+//	if (i < 0||i>L->length)
+//	{
+//		printf("位置错");
+//		return ERROR;
+//	}
+//	for (j = L->length; j >= i; j--)
+//		L->elem[j + 1] = L->elem[j];
+//	L->elem[i] = x;
+//	L->length++;
+//	return TRUE;
+//}
+//int main()
+//{
+//	int i;
+//	SeqList L = {0};
+//	printf("输入顺序表中的数值:\n");
+//	for (i = 0; i<maxsize-1; i++)
+//	{
+//		scanf("%d", &(L.elem[i]));
+//		L.length++;
+//	}
+//	/*printf("请输入要插入的位置和要插入的数据：");
+//	int x;
+//		scanf("%d %d", &i,&x);*/
+//	insert_SeqList(&L, 1, 6);
+//	for (i = 0; i<maxsize; i++)
+//	{
+//		printf("%d ", L.elem[i]);
+//	}
+//}
+
+//#include<stdio.h>
+//int main()
+//{
+//	int a, b, c, m, n;
+//	scanf("%d %d", &m, &n);//输入两个小于1000的正整数，以空格隔开
+//	if (m<n)
+//	{
+//		c = m;
+//		m = n;
+//		n = c;
+//	}
+//	 a = m;
+//	 b = n;
+//
+//	while (b != 0)
+//	{
+//		c = a%b;
+//		a = b;
+//		b = c;
+//	}
+//	printf("%d %d", a, m*n / a);
+//	return 0;
+//}
+//#include <stdio.h>
+//int main()
+//{
+//	int m, n;
+//	int i = 0;//最大公约数
+//	int j = 0;//最小公倍数
+//	printf("请输入两个数，空格隔开：");
+//	scanf("%d %d", &m, &n);
+//	for (i = m; i > 0; i--)
+//	{
+//		if ((m%i == 0) && (n%i == 0))
+//		{
+//			break;
+//		}
+//	}
+//	for (j = m;;j++)
+//	{
+//		if ((j%m == 0) && (j%n == 0))
+//		{
+//			break;
+//		}
+//	}
+//	printf("%d %d\n",i,j); 
+//		return 0;
+//}
+//
+
 #include<stdio.h>
-
-// 定义数据结构，size为顺序表实际元素个数
-typedef struct {
-	int m[MAXSIZE];
-	int size;
-}list;
-
-//创建
-void creat(list *s)
-{
-	int n, len;
-	printf("输入顺序表的长度：");
-	scanf("%d", &len);
-	s->size = len;
-	printf("输入顺序表的元素：");
-	for (int i = 0; i < len; i++)
-	{
-		scanf("%d", &n);
-		s->m[i] = n;
-	}
-}
-
-//输出
-void print(list *s)
-{
-	for (int i = 0; i < s->size; i++)
-		printf("%d ", s->m[i]);
-	printf("\n");
-}
-
-//合并
-void combine(list *a, list *b, list *c)
-{
-	int i = 0, j = 0, k = 0;
-	//同时扫描两个表 
-	while (i<a->size && j<b->size)
-	{
-		if (a->m[i] <= b->m[j])
-		{
-			c->m[k] = a->m[i];
-			i++;
-			k++;
-		}
-		else
-		{
-			c->m[k] = b->m[j];
-			j++;
-			k++;
-		}
-	}
-	//A表扫完，B组未扫完 
-	if (i == a->size)
-	{
-		for (; j<b->size; j++)
-		{
-			c->m[k] = b->m[j];
-			k++;
-		}
-	}
-	if (j == b->size)
-	{
-		for (; i<a->size; i++)
-		{
-			c->m[k] = a->m[i];
-			k++;
-		}
-	}
-	c->size = k;
-}
-
-
 int main()
 {
-	list a;
-	list b;
-	list c;
-	creat(&a);
-	creat(&b);
-	print(&a);
-	print(&b);
-	combine(&a, &b, &c);
-	print(&c);
+	double sum = 0, m,t=1,i,j;
+	/*int t = 1;
+	int i = 0;
+	int j = 0;*/
+	scanf("%lf", &m);
+	for (i = 1, j = 3; t>m; i++, j += 2)
+	{
+		sum += t;
+		t *= i / j;
+	}
+	printf("%.6f", sum * 2);
+	return 0;
 }
+
+//double flag(int n);
+//double mut(int m);
+//int main()
+//{
+//	double sum = 0.0, a[10000];
+//	int i = 0, j = 1, k = 0;
+//	double m;
+//	scanf("%lf", &m);        //有修改
+//	for (i = 0, j = 1, k = 0; (flag(i) / mut(j)) >= m; i++, j += 2, k++)
+//	{
+//		a[k] = flag(i) / mut(j);
+//		sum += a[k];
+//	}
+//	printf("%f", sum * 2);
+//}
+//double flag(int n)
+//{
+//	int i;
+//	double sum = 1.0;
+//	if (n>0)
+//	for (i = 1; i <= n; i++)
+//	{
+//		sum = sum*i;
+//	}
+//	if (n == 0) sum = 1.0;    //此句多余
+//	return sum;
+//}
+//double mut(int m)
+//{
+//	int i;
+//	double sum = 1.0;
+//	for (i = 1; i <= m; i = i + 2)
+//	{
+//		sum = sum*i;
+//	}
+//	return sum;
+//}
+
+ 
