@@ -1,8 +1,9 @@
-﻿生成启动时间为 2019/10/22 23:57:49。
+﻿生成启动时间为 2019/11/3 15:55:43。
      1>项目“D:\CODE\code\练习\练习\练习.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
          D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt "练习.c"
          练习.c
+     1>d:\code\code\练习\练习\练习.c(407): warning C4244: “+=”: 从“double”转换到“int”，可能丢失数据
        Link:
          D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\CODE\code\练习\Debug\练习.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\CODE\code\练习\Debug\练习.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\CODE\code\练习\Debug\练习.lib" /MACHINE:X86 "Debug\练习.obj"
          练习.vcxproj -> D:\CODE\code\练习\Debug\练习.exe
@@ -10,4 +11,4 @@
 
 生成成功。
 
-已用时间 00:00:00.36
+已用时间 00:00:01.49

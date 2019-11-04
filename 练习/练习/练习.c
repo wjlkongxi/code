@@ -336,23 +336,23 @@
 //		return 0;
 //}
 //
-
-#include<stdio.h>
-int main()
-{
-	double sum = 0, m,t=1,i,j;
-	/*int t = 1;
-	int i = 0;
-	int j = 0;*/
-	scanf("%lf", &m);
-	for (i = 1, j = 3; t>m; i++, j += 2)
-	{
-		sum += t;
-		t *= i / j;
-	}
-	printf("%.6f", sum * 2);
-	return 0;
-}
+//
+//#include<stdio.h>
+//int main()
+//{
+//	double sum = 0, m,t=1,i,j;
+//	/*int t = 1;
+//	int i = 0;
+//	int j = 0;*/
+//	scanf("%lf", &m);
+//	for (i = 1, j = 3; t>m; i++, j += 2)
+//	{
+//		sum += t;
+//		t *= i / j;
+//	}
+//	printf("%.6f", sum * 2);
+//	return 0;
+//}
 
 //double flag(int n);
 //double mut(int m);
@@ -391,5 +391,26 @@ int main()
 //	}
 //	return sum;
 //}
-
- 
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int n = 0;
+	int t = 0;
+	int i = 0;
+	int num = 0;
+	scanf("%d", &n);
+	int m = n;
+	for (i = 0;; i++)       
+	{
+		t = n % 10;
+		num+= t*pow(8, i); 
+		if (n / 10 == 0)
+		{
+			printf("%d(8)=%d(10)\n", m,num);
+			break; 
+		}
+		n = n / 10;
+	}
+	return 0;
+}
